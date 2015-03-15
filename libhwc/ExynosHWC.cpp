@@ -2717,8 +2717,10 @@ static int exynos5_config_gsc_m2m(hwc_layer_1_t &layer,
             usage |= GRALLOC_USAGE_PROTECTED;
 #ifdef USE_NORMAL_DRM
             usage &= ~GRALLOC_USAGE_PRIVATE_NONSECURE;
+#endif
         } else if (exynos5_get_drmMode(src_handle->flags) == NORMAL_DRM) {
             usage |= GRALLOC_USAGE_PROTECTED;
+#ifdef USE_NORMAL_DRM
             usage |= GRALLOC_USAGE_PRIVATE_NONSECURE;
 #endif
         }
