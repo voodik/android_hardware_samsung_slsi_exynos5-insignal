@@ -42,7 +42,7 @@ endif
 endif
 
 ifeq ($(BOARD_USES_CEC),true)
-	LOCAL_SHARED_LIBRARIES += libcec
+	LOCAL_SHARED_LIBRARIES += libcec-exynos
 	LOCAL_CFLAGS += -DUSES_CEC
 endif
 
